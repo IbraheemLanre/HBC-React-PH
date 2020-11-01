@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import Result from "./components/Result";
 
 class App extends React.Component {
   state = {
@@ -26,14 +27,11 @@ class App extends React.Component {
 
   render() {
     const isEven = this.state.likes % 2 === 0;
+    const bgColor = isEven ? "red" : "yellow";
     return (
-      <div
-        style={{
-          backgroundColor: isEven ? "red" : "yellow",
-        }}
-        className={isEven ? "even" : "odd"}
-      >
-        <h1>Total likes: {this.state.likes}</h1>
+      <div>
+        <Result isEven={isEven} likes={this.state.likes} color={bgColor} />
+
         <button id="increase-btn" onClick={this.increase}>
           Increase
         </button>
