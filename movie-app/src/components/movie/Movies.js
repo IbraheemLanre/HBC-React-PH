@@ -1,6 +1,7 @@
-import { React, useState } from "react";
+import { React } from "react";
 import "./Movies.css";
 
+<<<<<<< HEAD
 const Movies = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState("");
@@ -71,6 +72,30 @@ const Movies = () => {
     );
   }
   return movieList;
+=======
+const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=";
+const API_KEY = process.env.ACCESS_KEY;
+
+const Movies = () => {
+  return (
+    <div>
+      <form className="form">
+        <label htmlFor="query" className="label">
+          Movie Name
+        </label>
+        <input
+          type="text"
+          name="query"
+          className="input"
+          placeholder="Jurassic Park"
+        />
+        <button type="submit" className="button">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+>>>>>>> parent of a4d31d1... added movie-app functionality and API call
 };
 
 export default Movies;
