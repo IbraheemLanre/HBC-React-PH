@@ -7,8 +7,7 @@ const Movies = () => {
 
   const searchMovies = async (e) => {
     const API_KEY = process.env.REACT_APP_ACCESS_KEY;
-    // const API_URL = `//api.themoviedb.org/3/movie/550?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
-    const API_URL = `http://www.omdbapi.com/?t=${query}&apikey=${API_KEY}`;
+    const API_URL = `//www.omdbapi.com/?t=${query}&apikey=${API_KEY}`;
 
     e.preventDefault();
     console.log("submitting");
